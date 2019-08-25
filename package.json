@@ -1,6 +1,6 @@
 {
   "name": "fatec-franca-core-api",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Api de integração com o siga",
   "main": "dist/index.js",
   "author": {

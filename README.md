@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">Fatec Franca Core Api</h1>
-<h5 align="center">v0.0.1</h1>
+<h5 align="center">v0.0.2</h1>
 
 ***
 Thanks https://github.com/filipemeneses/fatec-api

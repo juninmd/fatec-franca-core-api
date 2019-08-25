@@ -32,11 +32,12 @@
     ],
   },
   "include": [
-    "**/*"
+    "./src/**/*"
   ],
   "exclude": [
     ".vscode",
     "node_modules",
-    "test"
+    "scripts",
+    "__tests__"
   ]
 }
