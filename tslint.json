@@ -1,0 +1,264 @@
+{
+  "extends": [
+    "tslint-config-airbnb"
+  ],
+  "rules": {
+    "array-type": [
+      true,
+      "array"
+    ],
+    "ban-types": {
+      "options": [
+        [
+          "Object",
+          "Avoid using the `Object` type. Did you mean `object`?"
+        ],
+        [
+          "Function",
+          "Avoid using the `Function` type. Prefer a specific function type, like `() => void`, or use `ts.AnyFunction`."
+        ],
+        [
+          "Boolean",
+          "Avoid using the `Boolean` type. Did you mean `boolean`?"
+        ],
+        [
+          "Number",
+          "Avoid using the `Number` type. Did you mean `number`?"
+        ],
+        [
+          "String",
+          "Avoid using the `String` type. Did you mean `string`?"
+        ]
+      ]
+    },
+    "one-line": [
+      true,
+      "check-open-brace",
+      "check-whitespace"
+    ],
+    "semicolon": [
+      true,
+      "always",
+      "ignore-bound-class-methods"
+    ],
+    "space-within-parens": true,
+    "typedef-whitespace": [
+      true,
+      {
+        "call-signature": "nospace",
+        "index-signature": "nospace",
+        "parameter": "nospace",
+        "property-declaration": "nospace",
+        "variable-declaration": "nospace"
+      },
+      {
+        "call-signature": "onespace",
+        "index-signature": "onespace",
+        "parameter": "onespace",
+        "property-declaration": "onespace",
+        "variable-declaration": "onespace"
+      }
+    ],
+    "no-implicit-dependencies": [
+      true,
+      "dev"
+    ],
+    "variable-name": [
+      true,
+      "ban-keywords",
+      "check-format",
+      "allow-leading-underscore"
+    ],
+    "arrow-return-shorthand": false,
+    "forin": false,
+    "member-access": false,
+    "no-require-imports": false,
+    "no-conditional-assignment": true,
+    "no-console": false,
+    "no-debugger": true,
+    "no-empty-interface": true,
+    "no-object-literal-type-assertion": false,
+    "no-shadowed-variable": false,
+    "no-submodule-imports": false,
+    "no-var-requires": true,
+    "ordered-imports": true,
+    "import-name": false,
+    "match-default-export-name": false,
+    "prefer-conditional-expression": false,
+    "ban-comma-operator": false,
+    "restrict-plus-operands": false,
+    "max-classes-per-file": true,
+    "no-increment-decrement": false,
+    "member-ordering": false,
+    "no-angle-bracket-type-assertion": false,
+    "no-bitwise": false,
+    "no-namespace": false,
+    "no-reference": true,
+    "object-literal-sort-keys": false,
+    "jsx-no-lambda": false,
+    "semi": [
+      2,
+      "never"
+    ],
+    "no-constant-condition": true,
+    "interface-name": [
+      true,
+      "never-prefix"
+    ],
+    "interface-over-type-literal": true,
+    "jsdoc-format": true,
+    "no-inferrable-types": true,
+    "no-internal-module": true,
+    "no-null-keyword": false,
+    "no-duplicate-variable": true,
+    "no-switch-case-fall-through": true,
+    "no-trailing-whitespace": [
+      true,
+      "ignore-template-strings",
+      "ignore-jsdoc"
+    ],
+    "no-var-keyword": true,
+    "object-literal-shorthand": true,
+    "object-shorthand-properties-first": false,
+    "object-literal-key-quotes": [
+      true,
+      "as-needed"
+    ],
+    "prefer-array-literal": true,
+    "quotemark": [
+      true,
+      "single",
+      "avoid-escape",
+      "avoid-template",
+      "jsx-double"
+    ],
+    "prefer-template": false,
+    "no-eval": true,
+    "prefer-object-spread": true,
+    "prefer-const": [
+      true,
+      {
+        "destructuring": "all"
+      }
+    ],
+    "no-function-constructor-with-string-args": true,
+    "space-before-function-paren": [
+      true,
+      {
+        "anonymous": "always",
+        "named": "never"
+      }
+    ],
+    "no-parameter-reassignment": false,
+    "align": [
+      true,
+      "arguments",
+      "parameters"
+    ],
+    "ter-prefer-arrow-callback": [
+      true
+    ],
+    "arrow-parens": false,
+    "ter-arrow-parens": [
+      true,
+      "as-needed",
+      {
+        "requireForBlockBody": true
+      }
+    ],
+    "no-duplicate-imports": true,
+    "file-name-casing": [
+      true,
+      {
+        ".style.ts": "kebab-case",
+        ".ts": "kebab-case",
+        ".*": "camel-case"
+      }
+    ],
+    "one-variable-per-declaration": [
+      true,
+      "ignore-for-loop"
+    ],
+    "triple-equals": [
+      true,
+      "allow-null-check"
+    ],
+    "curly": [
+      true,
+      "ignore-same-line"
+    ],
+    "max-line-length": [
+      true,
+      300
+    ],
+    "brace-style": [
+      true,
+      "1tbs",
+      {
+        "allowSingleLine": true
+      }
+    ],
+    "no-else-after-return": true,
+    "comment-format": [
+      true,
+      "check-space"
+    ],
+    "indent": [
+      true,
+      "spaces"
+    ],
+    "ter-indent": [
+      true,
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-decl",
+      "check-operator",
+      "check-preblock",
+      "check-separator"
+    ],
+    "eofline": false,
+    "space-in-parens": [
+      true,
+      "never"
+    ],
+    "array-bracket-spacing": [
+      true,
+      "never"
+    ],
+    "object-curly-spacing": [
+      true,
+      "always"
+    ],
+    "block-spacing": true,
+    "ter-computed-property-spacing": true,
+    "ter-func-call-spacing": true,
+    "no-return-await": true,
+    "no-consecutive-blank-lines": true,
+    "no-unused-expression": true,
+    "no-unnecessary-class": true,
+    "no-invalid-template-strings": true,
+    "no-boolean-literal-compare": true,
+    "no-duplicate-switch-case": true,
+    "trailing-comma": [
+      true,
+      {
+        "multiline": "always",
+        "singleline": "never",
+        "esSpecCompliant": true
+      }
+    ],
+    "no-construct": true,
+    "radix": false,
+    "class-name": true,
+    "no-this-assignment": [
+      true,
+      "allow-destructuring"
+    ]
+  }
+}
