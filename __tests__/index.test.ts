@@ -9,7 +9,7 @@ import {
   getSchedules,
   getSchoolGrade,
   login,
-} from '../src/api/fatec.api';
+} from '../src/api/siga.api';
 
 async function init() {
   try {

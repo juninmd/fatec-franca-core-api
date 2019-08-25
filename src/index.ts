@@ -1,1 +1,1 @@
-export * from './api/fatec.api';
+export * from './api/siga.api';
