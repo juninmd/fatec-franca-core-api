@@ -1,25 +1,8 @@
 {
   "files.exclude": {
     "node_modules": true,
-    ".gitignore": true,
     "**/.git": true,
-    "**/*.js": false,
-    "**/*.js.map": true,
-    "**/*.d.ts": true,
-    "**/.svn": true,
-    "**/.hg": true,
-    "**/CVS": true,
-    "**/.DS_Store": true,
     "dist": true,
-    "package-lock.json": true,
-    ".vscode": false,
-    ".editorconfig": true,
-    "tsconfig.json": false,
-    "tslint.json": false,
-    "nodemon.json": true,
-    "yarn.lock": true,
-    "Procfile": true,
-    "yarn-error.log": true
   },
   "typescript.tsdk": "node_modules/typescript/lib"
 }
