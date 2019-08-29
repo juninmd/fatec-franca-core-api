@@ -11,40 +11,60 @@ import {
   login,
 } from '../src/api/siga.api';
 
-async function init() {
-  try {
-    const sessionId = await login({ username: process.env.USERNAME, password: process.env.PASSWORD });
-    console.log(sessionId);
+let sessionId = '';
+jest.setTimeout(10000);
 
+describe('get data from siga', () => {
+
+  it('login', async () => {
+    const { USERNAME, PASSWORD } = process.env;
+    sessionId = await login({ username: USERNAME, password: PASSWORD });
+    expect(sessionId).toBeDefined();
+  });
+
+  it('name', async () => {
     const name = await getName(sessionId);
-    console.log(name);
+    expect(name).toBeDefined();
+  });
 
+  it('profile', async () => {
     const profile = await getProfile(sessionId);
-    console.log(profile);
+    expect(profile).toBeDefined();
+  });
 
+  it('academic calendar', async () => {
     const aca = await getAcademicCalendar(sessionId);
-    console.log(aca);
+    expect(aca).toBeDefined();
+  });
 
+  it('school grade', async () => {
     const sg = await getSchoolGrade(sessionId);
-    console.log(sg);
+    expect(sg).toBeDefined();
+  });
 
+  it('history', async () => {
     const s = await getHistory(sessionId);
-    console.log(s);
+    expect(s).toBeDefined();
+  });
 
+  it('schedules', async () => {
     const ss = await getSchedules(sessionId);
-    console.log(ss);
+    expect(ss).toBeDefined();
+  });
 
+  it('emails', async () => {
     const re = await getRegisteredEmails(sessionId);
-    console.log(re);
+    expect(re).toBeDefined();
+  });
 
+  it('partial grades', async () => {
     const pg = await getPartialGrades(sessionId);
-    console.log(pg);
+    expect(pg).toBeDefined();
+  });
 
+  it('disciplines', async () => {
     const ed = await getEnrolledDisciplines(sessionId);
-    console.log(ed);
+    expect(ed).toBeDefined();
+  });
 
-  } catch (error) {
-    console.log(error);
-  }
-}
-init();
+});

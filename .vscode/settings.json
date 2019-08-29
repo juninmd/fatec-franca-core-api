@@ -3,7 +3,7 @@
     "node_modules": true,
     ".gitignore": true,
     "**/.git": true,
-    "**/*.js": true,
+    "**/*.js": false,
     "**/*.js.map": true,
     "**/*.d.ts": true,
     "**/.svn": true,

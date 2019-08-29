@@ -1,12 +1,8 @@
 #!/bin/bash
 
 echo "===> Cleaning..."
-rm -rf **/*.d.ts
-rm -rf **/*.js
-rm -rf **/*.js.map
-
-rm -rf *.d.ts
-rm -rf *.js
-rm -rf *.js.map
+rm -rf ./src/**/*.d.ts
+rm -rf ./src/**/*.js
+rm -rf ./src/**/*.js.map
 
 rm -rf ./dist
