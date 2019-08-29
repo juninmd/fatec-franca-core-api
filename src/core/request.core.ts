@@ -61,25 +61,18 @@ export const makeRequest = async (config: MakeRequest) => {
   const baseConfig: any = {
     encoding: config.isImage ? 'base64' : undefined,
     form: {
-      GXState: '{"_EventName":"EENTER.","_EventGridId":"","_EventRowId":"",' +
-        '"MPW0005_CMPPGM":"login_top.aspx","MPW0005GX_FocusControl":"","vREC_' +
-        'SIS_USUARIOID":"","GX_FocusControl":"vSIS_USUARIOID","GX_AJAX_KEY":"' +
-        '0BDD4711481AA1585555288A38D54A0E","AJAX_SECURITY_TOKEN":"60D2197ED30' +
-        'EA865BA4DDC1181C00E9DE327E1CD49D496228104BEF231E87A2D","GX_CMP_OBJS"' +
-        ':{"MPW0005":"login_top"},"sCallerURL":"","GX_RES_PROVIDER":"GXResour' +
-        'ceProvider.aspx","GX_THEME":"GeneXusX","_MODE":"","Mode":"","IsModif' +
-        'ied":"1"}',
+      GXState: '{"_EventName":"E\\\'EVT_CONFIRMAR\\\'.","_EventGridId":"","_EventRowId":"","MPW0005_CMPPGM":"login_top.aspx","MPW0005GX_FocusControl":"","vSAIDA":"","vREC_SIS_USUARIOID":"","GX_FocusControl":"vSIS_USUARIOID","GX_AJAX_KEY":"5D987297E9F755F2052325C126E1B0BD","AJAX_SECURITY_TOKEN":"81BEC8A773B479F80AB961F0F34AE8A955FFB25EE2C0038DAA4F6627B9250D53","GX_CMP_OBJS":{"MPW0005":"login_top"},"sCallerURL":"","GX_RES_PROVIDER":"GXResourceProvider.aspx","GX_THEME":"GeneXusX","_MODE":"","Mode":"","IsModified":"1"}',
       ...config.form,
     },
     headers: {
       ...config.cookie && { ['cookie']: config.cookie },
       ...config.method === 'post' && { ['Content-Type']: 'application/x-www-form-urlencoded' },
       ['Origin']: DOMAIN,
-      ['User-Agent']: 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36',
+      ['User-Agent']: 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0',
     },
     method: config.method ? config.method.toUpperCase() : 'POST',
-    params: {
-      '165c97fac0d4c1ad6055e3730b7af070,,gx-no-cache': 1513131652687,
+    qs: {
+      '6f0bc74644f69460f52750a60c7e0956,gx-no-cache': 1567097707476,
     },
     uri: DOMAIN + config.url,
   };
