@@ -264,6 +264,17 @@ export const getSchedules = (cookie) => {
         "[name='Grid6ContainerDataV']",
         "[name='Grid7ContainerDataV']",
       ];
+
+      const disciplinesRaw = JSON.parse($('[name=GXState]').val().replace(/\\>/g, '&gt')).vALU_ALUNOHISTORICOITEM_SDT;
+
+      const disciplines = disciplinesRaw.map((d) => {
+        return {
+          name: d.ACD_DisciplinaNome.replace('&gt', '').replace('<br', ''),
+          teacher: d.Pro_PessoalNome,
+          code: d.ACD_DisciplinaSigla,
+        };
+      });
+
       const schedules = tags.map((tag, index) => {
         const data = JSON.parse($(tag).attr('value'));
 
@@ -299,7 +310,12 @@ export const getSchedules = (cookie) => {
             endAt.setMinutes(parseInt(endMinutes));
             endAt.setHours(parseInt(endHours));
 
-            const discipline = new Discipline({ code: period[2], classroomCode: period[3] });
+            const code = period[2];
+            const classroomCode = period[3];
+
+            const detail = disciplines.find((q: any) => q.code === code);
+
+            const discipline = new Discipline({ code, classroomCode, name: detail.name, teacherName: detail.teacher });
 
             return { discipline, endAt, startAt };
           }),
