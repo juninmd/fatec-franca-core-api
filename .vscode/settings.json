@@ -4,5 +4,17 @@
     "**/.git": true,
     "dist": true,
   },
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#88d7ea",
+    "titleBar.activeBackground": "#5dc9e2",
+    "titleBar.inactiveBackground": "#5dc9e299",
+    "statusBar.background": "#5dc9e2",
+    "statusBarItem.hoverBackground": "#32bbda",
+    "panel.border": "#88d7ea",
+    "sideBar.border": "#88d7ea",
+    "editorGroup.border": "#88d7ea",
+    "tab.activeBorder": "#88d7ea"
+  },
+  "peacock.color": "#5dc9e2"
 }

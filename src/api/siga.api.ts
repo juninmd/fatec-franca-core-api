@@ -268,8 +268,12 @@ export const getSchedules = (cookie) => {
       const disciplinesRaw = JSON.parse($('[name=GXState]').val().replace(/\\>/g, '&gt')).vALU_ALUNOHISTORICOITEM_SDT;
 
       const disciplines = disciplinesRaw.map((d) => {
+
+        const [name, hours] = d.ACD_DisciplinaNome.replace('&gt', '').split('<br');
+
         return {
-          name: d.ACD_DisciplinaNome.replace('&gt', '').replace('<br', ''),
+          name,
+          frequency: hours,
           teacher: d.Pro_PessoalNome,
           code: d.ACD_DisciplinaSigla,
         };
@@ -315,7 +319,7 @@ export const getSchedules = (cookie) => {
 
             const detail = disciplines.find((q: any) => q.code === code);
 
-            const discipline = new Discipline({ code, classroomCode, name: detail.name, teacherName: detail.teacher });
+            const discipline = new Discipline({ code, classroomCode, frequency: detail.frequency, name: detail.name, teacherName: detail.teacher });
 
             return { discipline, endAt, startAt };
           }),
