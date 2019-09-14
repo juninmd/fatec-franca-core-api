@@ -22,7 +22,7 @@ export const getProfilePictureUrl = (url) => {
 
 export const getAcademicUrl = (url) => {
   const [, uri] = url.split(DOMAIN);
-  return uri + '?1';
+  return uri;
 };
 
 export const strNumber = (n: string) => {

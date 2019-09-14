@@ -68,3 +68,81 @@ describe('get data from siga', () => {
   });
 
 });
+
+const sessionInvalid = 'ASP.NET_SessionId=44ogpbfi4jqero11yc2pqg45; path=/; HttpOnly';
+
+describe('invalid token from siga', () => {
+
+  it('name', async () => {
+    try {
+      await getName(sessionInvalid);
+    } catch (error) {
+      expect(error.message).toBe('Não logado');
+    }
+  });
+
+  it('profile', async () => {
+    try {
+      await getProfile(sessionInvalid);
+    } catch (error) {
+      expect(error.message).toBe('Não logado');
+    }
+  });
+
+  it('academic calendar', async () => {
+    try {
+      await getAcademicCalendar(sessionInvalid);
+    } catch (error) {
+      expect(error.message).toBe('Não logado');
+    }
+  });
+
+  it('school grade', async () => {
+    try {
+      await getSchoolGrade(sessionInvalid);
+    } catch (error) {
+      expect(error.message).toBe('Não logado');
+    }
+  });
+
+  it('history', async () => {
+    try {
+      await getHistory(sessionInvalid);
+    } catch (error) {
+      expect(error.message).toBe('Não logado');
+    }
+  });
+
+  it('schedules', async () => {
+    try {
+      await getSchedules(sessionInvalid);
+    } catch (error) {
+      expect(error.message).toBe('Não logado');
+    }
+  });
+
+  it('emails', async () => {
+    try {
+      await getRegisteredEmails(sessionInvalid);
+    } catch (error) {
+      expect(error.message).toBe('Não logado');
+    }
+  });
+
+  it('partial grades', async () => {
+    try {
+      await getPartialGrades(sessionInvalid);
+    } catch (error) {
+      expect(error.message).toBe('Não logado');
+    }
+  });
+
+  it('disciplines', async () => {
+    try {
+      await getEnrolledDisciplines(sessionInvalid);
+    } catch (error) {
+      expect(error.message).toBe('Não logado');
+    }
+  });
+
+});

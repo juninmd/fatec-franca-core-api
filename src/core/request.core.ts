@@ -9,11 +9,12 @@ export interface MakeScrap {
   scrapper: any;
   cookie: string;
   method?: 'get' | 'post';
+  disableQs?: boolean;
 }
 
 export const makeScrap = async (options: MakeScrap) => {
 
-  const { cookie, url, scrapper } = options;
+  const { cookie, url, scrapper, disableQs } = options;
 
   if (!scrapperCache[cookie]) {
     scrapperCache[cookie] = {};
@@ -34,6 +35,7 @@ export const makeScrap = async (options: MakeScrap) => {
     method: options.method ? options.method : 'post',
     url,
     cookie,
+    disableQs,
   };
 
   const response = await makeRequest(optionsRequest);
@@ -56,6 +58,7 @@ export interface MakeRequest {
   form: any;
   cookie?: string;
   isImage?: boolean;
+  disableQs?: boolean;
 }
 export const makeRequest = async (config: MakeRequest) => {
   const baseConfig: any = {
@@ -71,8 +74,10 @@ export const makeRequest = async (config: MakeRequest) => {
       ['User-Agent']: 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0',
     },
     method: config.method ? config.method.toUpperCase() : 'POST',
-    qs: {
-      '6f0bc74644f69460f52750a60c7e0956,gx-no-cache': 1567097707476,
+    ...!config.disableQs && {
+      qs: {
+        '6f0bc74644f69460f52750a60c7e0956,gx-no-cache': 1567097707476,
+      }
     },
     uri: DOMAIN + config.url,
   };
