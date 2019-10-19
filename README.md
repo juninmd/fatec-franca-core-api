@@ -5,9 +5,9 @@
 <h1 align="center">Fatec Franca Core Api</h1>
 <h5 align="center">
 
-[![npm](https://img.shields.io/npm/v/fatec-franca-core-api.svg)]()
-[![npm](https://img.shields.io/npm/dt/fatec-franca-core-api)]()
-[![npm](https://img.shields.io/github/last-commit/juninmd/fatec-franca-core-api)]()
+[![npm](https://img.shields.io/npm/v/fatec-franca-core-api.svg)](https://www.npmjs.com/package/fatec-franca-core-api)
+[![npm](https://img.shields.io/npm/dt/fatec-franca-core-api)](https://www.npmjs.com/package/fatec-franca-core-api)
+[![npm](https://img.shields.io/github/last-commit/juninmd/fatec-franca-core-api)](https://www.npmjs.com/package/fatec-franca-core-api)
 [![CircleCI](https://circleci.com/gh/juninmd/fatec-franca-core-api.svg?style=svg)](https://circleci.com/gh/juninmd/fatec-franca-core-api)
 
 </h5>
